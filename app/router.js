@@ -1,13 +1,17 @@
 var Backbone = require('backbone');
+var React = require('react');
+var $ = require('jquery');
+
 
 var router = Backbone.Router.extend({
     routes: {
-        '*sup': 'home'
+        '': 'home'
     },
     initialize: function () {
     },
     home: function () {
-        console.log('bu');
+        var view = require('./views/home.jsx');
+        React.renderComponent(view(), $('#content')[0]);
     }
 });
 
