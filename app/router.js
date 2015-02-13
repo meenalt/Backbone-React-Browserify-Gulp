@@ -1,12 +1,14 @@
+var Backbone = require('backbone');
+
 var router = Backbone.Router.extend({
     routes: {
-        '/': 'home'
+        '*sup': 'home'
     },
     initialize: function () {
-        Backbone.history.start({ pushState: true, root: '/' });
     },
     home: function () {
-        print('hello');
-        console.log('hello');
+        console.log('bu');
     }
 });
+
+module.exports = router;
