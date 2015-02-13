@@ -23,6 +23,7 @@ gulp.task('browserify', function () {
 
     return gulp.src(['./app/main.js'])
         .pipe(browserified)
+        // skip uglify when debugging
         // .pipe(uglify())
         .pipe(gulp.dest('./dist/js'))
         .pipe(connect.reload());
